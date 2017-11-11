@@ -14,3 +14,22 @@
         <p>{{question.description}}</p>
     </mat-card-content>
 </mat-card>
+<div class="answers">
+    <h3>Respuestas</h3>
+    <ul class="answers-list" *ngIf="question.answer.length > 0">
+        <li *ngFor="let answer of question.answer">
+            <h5>{{answer.user.firstName}} {{answer.user.lastName}}
+                <small>{{answer.createdAt | amLocale: 'es' | amTimeAgo}}</small>
+            </h5>
+            <p class="description">
+                {{answer.description}}
+            </p>
+        </li>
+
+
+    </ul>
+    <p *ngIf="question.answer.length === 0">
+        Sea el primero en responder esta pregunta
+    </p>
+    <app-answer [question]="question" class="answer-form"></app-answer>
+</div>

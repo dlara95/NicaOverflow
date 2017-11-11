@@ -7,17 +7,21 @@ import { MaterialModule } from './material.module';
 import 'hammerjs';
 import { QuestionDetailComponent } from './question/question-detail.component';
 import { MomentModule } from 'angular2-moment';
+import { AnswerComponent } from './answer/answer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuestionDetailComponent
+    QuestionDetailComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MomentModule
+    MomentModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
