@@ -7,11 +7,19 @@
     </mat-input-container>
     <mat-grid-list cols="3" rowHeight="3:2">
         <mat-grid-tile>
-            <i mat-list-icon class="material-icons">help</i>
-            <small>sin icono</small>
+            <mat-radio-group [ngModel] name="icon">
+                <mat-radio-button value="none">
+                    <i mat-list-icon class="material-icons">help</i>
+                    <small>sin icono</small>
+                </mat-radio-button>
+            </mat-radio-group>
         </mat-grid-tile>
         <mat-grid-tile *ngFor="let icon of icons">
-            <i mat-list-icon class="devicon-{{ icon.name }}-{{ getIconVersion(icon) }}" *ngIf="icon.name !== 'illustrator'"></i>
+            <mat-radio-group [ngModel] name="icon">
+                <mat-radio-button value="devicon-{{ icon.name }}-{{ getIconVersion(icon) }}">
+                    <i mat-list-icon class="devicon-{{ icon.name }}-{{ getIconVersion(icon) }}" *ngIf="icon.name !== 'illustrator'"></i>
+                </mat-radio-button>
+            </mat-radio-group>
         </mat-grid-tile>
 
     </mat-grid-list>

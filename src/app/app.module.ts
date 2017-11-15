@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SigninScreenComponent } from './auth/signin-screen.component';
 import { QuestionListComponent } from './question/question-list.component';
 import { QuestionFormComponent } from './question/question-form.component';
+import { Routing } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { QuestionFormComponent } from './question/question-form.component';
     MaterialModule,
     MomentModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    Routing
   ],
   providers: [],
   bootstrap: [AppComponent]
