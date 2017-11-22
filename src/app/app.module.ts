@@ -13,6 +13,7 @@ import { SigninScreenComponent } from './auth/signin-screen.component';
 import { QuestionListComponent } from './question/question-list.component';
 import { QuestionFormComponent } from './question/question-form.component';
 import { Routing } from './app.routing';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { Routing } from './app.routing';
     MomentModule,
     FormsModule,
     ReactiveFormsModule,
-    Routing
+    Routing,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
